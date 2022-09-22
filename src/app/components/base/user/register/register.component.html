@@ -1,0 +1,76 @@
+<section class="w-full py-24 animated animatedFadeInUp fadeInUp">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto lg:my-0 flex flex-col justify-center">
+      <h1 class="text-5xl font-bold text-orange-custom flex justify-center mb-6">Register</h1>
+      <div class="flex justify-center pt-3">
+        <div class="inline-flex items-center mb-2">
+          <p class="text-md font-sans max-w-sm">
+            Lorem ipsum dolor sit amet. Ut animi magni rem modi nulla aut nesciunt velit sed pariatur consectetur rem
+            iusto earum ut
+          </p>
+        </div>
+      </div>
+
+      <div class="container w-full md:max-w-3xl mx-auto">
+        <div class="container px-4 mx-auto">
+          <form (ngSubmit)="processForm()">
+            <div>
+              <div class="text-sm font-bold text-gray-700">E-Mail</div>
+              <label>
+                <input
+                  #emailInput="ngModel"
+                  [(ngModel)]="email"
+                  class="input"
+                  class="w-full bg-gray-300 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  email
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  type="email">
+              </label>
+            </div>
+            <div class="mt-4">
+              <div class="text-sm font-bold text-gray-700">Password</div>
+              <label>
+                <input
+                  #emailInput="ngModel"
+                  [(ngModel)]="password"
+                  class="input"
+                  class="w-full bg-gray-300 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  email
+                  id="password"
+                  name="password"
+                  placeholder="Your password"
+                  required
+                  type="password">
+              </label>
+            </div>
+            <div class="mt-4">
+              <div class="text-sm font-bold text-gray-700">Password Confirmation</div>
+              <label>
+                <input
+                  #emailInput="ngModel"
+                  [(ngModel)]="passwordConfirmation"
+                  class="input"
+                  class="w-full bg-gray-300 text-gray-900 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  email
+                  id="passwordConfirmation"
+                  name="passwordConfirmation"
+                  placeholder="Your password confirmation"
+                  required
+                  type="password">
+              </label>
+            </div>
+            <div class="mt-4">
+              <button class="border-orange-custom text-orange-custom p-4 w-full rounded-full font-semibold
+              shadow-lg login duration-300">
+                Create an account
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

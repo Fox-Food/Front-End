@@ -1,0 +1,32 @@
+<section class="w-full py-24 animated animatedFadeInUp fadeInUp">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto lg:my-0 flex flex-col justify-center">
+      <h1 class="text-5xl font-bold text-orange-custom flex justify-center mb-6">Menu</h1>
+      <div class="flex justify-center pt-3">
+        <div class="inline-flex items-center mb-2">
+          <p class="text-md font-sans max-w-sm">
+            Lorem ipsum dolor sit amet. Ut animi magni rem modi nulla aut nesciunt velit sed pariatur consectetur rem
+            iusto earum ut
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
+           *ngIf="menuService.likedMenu[0].name !== 'Chargement'">
+        <div
+          *ngFor="let menu of menuService.likedMenu"
+          class="rounded-3xl bg-gray-200 px-6 h-80 flex flex-col justify-center items-center">
+          <img width="200" class="rounded-3xl border-2 border-black" src="{{ menu.image }}" alt="">
+          <span class="font-semibold text-lg py-2">{{ menu.day }}</span>
+          <p class="pb-3 font-normal text-grey-custom">{{ menu.name }}</p>
+          <a (click)="goToPage(menu)"
+             class="border-orange-custom font-bold py-2 px-4 p-12 rounded-3xl inline-flex items-center text-orange-custom duration-300 started">
+            <span>See More</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
