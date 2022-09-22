@@ -43,6 +43,9 @@ const routes: Routes = [
     path: "pricing", component: PricingComponent
   },
   {
+    path: "error", component: NotfoundComponent
+  },
+  {
     path: "user/login", component: LoginComponent
   },
   {
@@ -62,9 +65,6 @@ const routes: Routes = [
   },
   {
     path: "user/menu/view", component: ViewComponent
-  },
-  {
-    path: "error", component: NotfoundComponent
   },
   {
     path: "**", component: ViewComponent

@@ -39,7 +39,7 @@ export class SettingsComponent implements OnInit {
   }
 
   async processForm(): Promise<void> {
-
+    //TODO: change password
   }
 
 }

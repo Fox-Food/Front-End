@@ -21,7 +21,7 @@ import {Title} from "@angular/platform-browser";
   providedIn: 'root'
 })
 export class SimpletitleService {
-  private prefix: string = "WS-SN1 • ";
+  private prefix: string = "FoxFood • ";
 
   constructor(private titleService: Title) {
   }
