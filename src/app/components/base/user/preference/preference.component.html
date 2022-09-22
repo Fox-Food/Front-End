@@ -12,7 +12,7 @@
       </div>
 
       <div *ngIf="menuService.menu.length > 0 && menuService.menu[0].name !== 'Chargement'">
-        <div class="text-2xl pt-12 pb-6">
+        <div class="text-2xl pt-12 pb-6 flex flex-col justify-center items-center">
           <h1 class="text-orange-custom font-medium pb-4">{{ menuService.showedMenu.name }}</h1>
           <img class="rounded-xl shadow-lg" src="{{ menuService.showedMenu.image }}" alt="">
         </div>
