@@ -1,8 +1,12 @@
 <section>
   <nav class="relative px-12 py-4 flex justify-between items-center bg-white">
-    <a class="text-3xl font-bold leading-none">
-      <img alt="Logo FoxFood" class="h-10" src="assets/img/logo.svg">
-    </a>
+    <div class="text-2xl font-medium leading-none inline-flex justify-center items-center">
+      <img alt="Logo FoxFood" class="h-10 mr-2" src="assets/img/logo.svg">
+      <h1>
+        <span class="text-orange-custom">F</span>ox
+        <span class="text-orange-custom">F</span>ood
+      </h1>
+    </div>
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center text-orange-custom p-3">
         <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -103,14 +107,10 @@
                (click)="this.navigateService.navigate('user/preference')"
             >Preference</a>
           </li>
-          <li class="mb-1">
-            <a *ngIf="!loginService.isLogin"
-               class="block p-4 text-sm font-medium text-gray-400 rounded"
-               (click)="this.navigateService.navigate('services')"
-            >Services</a>
-            <a *ngIf="loginService.isLogin"
-               class="block p-4 text-sm font-medium text-gray-400 rounded"
-               (click)="this.navigateService.navigate('user/menu')"
+          <li class="mb-1" *ngIf="loginService.isLogin">
+            <a
+              class="block p-4 text-sm font-medium text-gray-400 rounded"
+              (click)="this.navigateService.navigate('user/menu')"
             >Menu</a>
           </li>
           <li class="mb-1">
