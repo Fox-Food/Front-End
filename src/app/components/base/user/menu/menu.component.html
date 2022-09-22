@@ -17,8 +17,7 @@
           *ngFor="let menu of menuService.likedMenu"
           class="rounded-3xl bg-gray-200 px-6 h-80 flex flex-col justify-center items-center">
           <img width="200" class="rounded-3xl border-2 border-black" src="{{ menu.image }}" alt="">
-          <span class="font-semibold text-lg py-2">{{ menu.day }}</span>
-          <p class="pb-3 font-normal text-grey-custom">{{ menu.name }}</p>
+          <span class="font-semibold text-lg py-2">{{ menu.name }}</span>
           <a (click)="goToPage(menu)"
              class="border-orange-custom font-bold py-2 px-4 p-12 rounded-3xl inline-flex items-center text-orange-custom duration-300 started">
             <span>See More</span>
