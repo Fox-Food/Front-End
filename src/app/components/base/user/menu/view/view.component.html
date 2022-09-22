@@ -36,11 +36,21 @@
         <div class="bg-gray-200 px-6 rounded-xl h-80">
           <h1 class="text-center text-orange-custom font-medium text-xl mt-4">Price comparison</h1>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-            <div class="flex justify-center">
+            <div class="flex flex-col justify-center">
               <img width="100" src="assets/img/carrefour.webp" alt="Market Logo">
+              <ul *ngIf="this.offer.name === 'Turkye Rice'"
+                class="list-disc flex flex-col justify-center mt-8">
+                <li>Riz: 1,09€ (0,81€/kg)</li>
+                <li>Turkye: 3,33€ (10,47€/kg)</li>
+              </ul>
             </div>
-            <div class="flex justify-center">
+            <div class="flex flex-col justify-center">
               <img width="100"  src="assets/img/intermarche.webp" alt="Market Logo">
+              <ul *ngIf="this.offer.name === 'Turkye Rice'"
+                class="list-disc flex flex-col justify-center mt-8">
+                <li>Rice: 1,06€ (1,15€/kg)</li>
+                <li>Turkye: 4,39€ (11,39€/kg)</li>
+              </ul>
             </div>
           </div>
         </div>
