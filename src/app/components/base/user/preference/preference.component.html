@@ -14,7 +14,18 @@
       <div *ngIf="menuService.menu.length > 0 && menuService.menu[0].name !== 'Chargement'">
         <div class="text-2xl pt-12 pb-6 flex flex-col justify-center items-center">
           <h1 class="text-orange-custom font-medium pb-4">{{ menuService.showedMenu.name }}</h1>
-          <img class="rounded-xl shadow-lg" src="{{ menuService.showedMenu.image }}" alt="">
+
+          <div class="w-full lg:w-2/5">
+            <div class="relative" style="z-index: 0;">
+              <img alt="Image of the menu" class="rounded-none lg:rounded-lg shadow-2xl w-full h-full"
+                   src="{{ menuService.showedMenu.image }}">
+              <img alt="" class="hidden lg:block absolute"
+                   src="assets/img/bullets-gray-right.svg" style="top:3rem; right: -3rem; z-index: -1;">
+              <img alt="" class="hidden lg:block absolute"
+                   src="assets/img/bullets-gray-left.svg" style="bottom:2.5rem; left: -4.5rem; z-index: -1;">
+            </div>
+          </div>
+
         </div>
 
         <div class="flex justify-center space-x-4 md:space-x-12">
